@@ -1,0 +1,17 @@
+FROM node:18.20.4-alpine
+
+WORKDIR /app
+
+COPY ./package*.json ./
+
+COPY .eslintrc.cjs ./
+COPY tsconfig.json ./
+COPY tsconfig.node.json ./
+COPY vite.config.ts ./
+
+RUN mkdir src
+RUN mkdir public
+
+RUN npm install
+
+CMD npm run dev

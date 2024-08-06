@@ -1,0 +1,32 @@
+FROM node:18.20.4-alpine as buildphase
+
+WORKDIR /usr
+
+COPY ./.eslintrc.cjs ./
+COPY ./package*.json ./
+COPY ./tsconfig.json ./
+COPY ./tsconfig.node.json ./
+COPY ./vite.config.ts ./
+COPY ./index.html ./
+
+RUN npm install --force
+
+RUN mkdir src
+RUN mkdir public
+
+COPY ./src ./src
+COPY ./public ./public
+
+RUN npm run build
+
+
+
+FROM nginx:1.25.3-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=buildphase /usr/build /usr/share/nginx/html
+
+COPY ./nginx_default.conf /etc/nginx/conf.d/
+
+CMD ["nginx", "-g", "daemon off;"]

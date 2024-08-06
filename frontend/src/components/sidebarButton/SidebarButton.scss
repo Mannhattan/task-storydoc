@@ -1,0 +1,61 @@
+.sidebar-button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+    padding: 0;
+
+    width: 100%;
+    height: auto;
+
+    padding: 12px 12px;
+
+    &:hover {
+        transition: opacity .3s ease-in-out;
+        opacity: .8;
+    }
+
+    svg {
+        stroke: #a1a8af;
+    }
+    
+    p {
+        padding: 0 16px;
+        font-size: 0.9em;
+        font-weight: 600;
+        
+        font-family: "Montserrat", sans-serif;
+        
+        color: #a1a8af;
+    }
+
+    &-checked {
+        svg {
+            stroke: #0E84FC;
+        }
+
+        p {
+            color: #0E84FC;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 6px;
+
+        p {
+            padding: 0 8px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

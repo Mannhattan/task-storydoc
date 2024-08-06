@@ -1,0 +1,51 @@
+[
+    {
+        "id": 4,
+        "position": 1,
+        "name": "Do the laundry",
+        "isCompleted": false,
+        "column": "TODO"
+    },
+    {
+        "id": 7,
+        "position": 1,
+        "name": "Add black clothes",
+        "isCompleted": false,
+        "parent": 4
+    },
+    {
+        "id": 8,
+        "position": 1,
+        "name": "Add shirts",
+        "isCompleted": false,
+        "parent": 7
+    },
+    {
+        "id": 5,
+        "position": 2,
+        "name": "Add socks",
+        "isCompleted": false,
+        "parent": 7
+    },
+    {
+        "id": 6,
+        "position": 1,
+        "name": "Swipe floors",
+        "isCompleted": false,
+        "column": "IN_PROGRESS"
+    },
+    {
+        "id": 10,
+        "position": 1,
+        "name": "Swipe garage",
+        "isCompleted": false,
+        "parent": 6
+    },
+    {
+        "id": 11,
+        "position": 1,
+        "name": "Wash the dishes",
+        "isCompleted": false,
+        "column": "DONE"
+    }
+]

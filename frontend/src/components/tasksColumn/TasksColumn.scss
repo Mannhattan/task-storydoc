@@ -1,0 +1,44 @@
+.tasks-column {
+    width: 100%;
+    height: calc(100vh - 32px);
+    background-color: #ECF1FD;
+    border-radius: 16px;
+
+    border: 2px solid #ECF1FD;
+
+    transition: all 0.15s ease-in-out;
+
+    box-shadow: 0px 0px 1px 0px rgba(18, 3, 62, 0.11), 0px 3px 5px 0px rgba(18, 3, 62, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+
+    > p {
+        width: 100%;
+        padding: 8px;
+
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #42566C;
+    }
+
+    &-items {
+        width: 100%;
+        height: 100%;
+
+        padding: 0 8px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    @media only screen and (max-width: 1280px) {
+        height: calc(100vh - 120px);
+    }
+
+    @media only screen and (max-width: 920px) {
+        height: auto;
+    }
+}

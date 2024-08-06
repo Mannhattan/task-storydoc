@@ -1,0 +1,63 @@
+.tasks-add {
+    width: 100%;
+    height: auto;
+
+    font-family: "Montserrat", sans-serif;
+
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    padding: 16px 8px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    
+    transition: 0.2s ease-in-out;
+
+    p {
+        margin-left: 5px;
+        font-weight: 600;
+        color: #42566C;
+    }
+
+    &:hover {
+        transition: 0.2s ease-in-out;
+        border-color: #fff;
+    }
+
+    &-editing {
+        width: 100%;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    
+        &-options {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        input {
+            width: 100%;
+            border: 1px solid #ECF1FD;
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 2.1;
+    
+            padding-left: 8px;
+        }
+    
+    }
+}

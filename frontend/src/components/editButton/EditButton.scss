@@ -1,0 +1,37 @@
+.button-edit {
+    width: 100%;
+    height: auto;
+
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    padding: 6px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transition: 0.2s ease-in-out;
+        opacity: 0.3;
+    }
+
+    svg {
+        stroke: #000;
+        fill: #000;
+    }
+    
+    &-being-edited {
+        svg {
+            stroke: #000;
+            fill: transparent;
+        }
+    }
+}
